@@ -1,0 +1,65 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.free</groupId>
+  <artifactId>free-spring-boot-app</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- Spring Boot 父項目 -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.1.0</version> <!-- 使用最新的穩定版本 -->
+    <relativePath/> <!-- 查找中央 Maven 倉庫 -->
+  </parent>
+
+  <!-- 依賴項 -->
+  <dependencies>
+    <!-- Spring Boot Web Starter，用於構建 Web 應用程式 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- Spring Boot JPA Starter，用於與數據庫交互 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <!-- Spring Boot Security Starter，用於安全性 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+
+    <!-- Spring Boot Test Starter，用於測試 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- MySQL JDBC 驅動 -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.33</version> <!-- 使用最新穩定版本 -->
+        <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- Maven 插件配置 -->
+  <build>
+    <plugins>
+        <!-- Spring Boot Maven 插件 -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+  </build>
+  
+</project>
+
+
